@@ -43,14 +43,14 @@
                 </div>
 
                 <div class="button-group">
-                    <a href="new-fashion.html" class="btn-outline-gold">
+                    <a href="newfashon.html" class="btn-outline-gold">
                         <i class="fas fa-arrow-right"></i> رجوع إلى نيو فاشون
                     </a>
                     <button type="submit" class="btn-gold">
                         <i class="fas fa-save"></i> تأكيد الإضافة
                     </button>
-                    <a href="#bottom" class="btn-scroll-bottom">
-                        <i class="fas fa-arrow-down"></i> إلى نهاية الموقع
+                    <a href="index.html" class="btn-scroll-bottom">
+                        <i class="fas fa-arrow-down"></i> العودة الى الرئيسية
                     </a>
                 </div>
             </form>
@@ -64,10 +64,8 @@
     </div>
 
     <script>
-        document.querySelector('.btn-scroll-bottom')?.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('bottom').scrollIntoView({ behavior: 'smooth' });
-        });
+        // تم إزالة المستمع الخاص بـ btn-scroll-bottom حتى لا يعترض على الانتقال إلى index.html
+        // الآن الزر يعمل كرابط عادي
 
         document.querySelector('form')?.addEventListener('submit', function(e) {
             e.preventDefault();
