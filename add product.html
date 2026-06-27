@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إضافة منتج جديد</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                <i class="fas fa-plus-circle" style="color: #d4a373; font-size: 1.8rem;"></i>
+                إضافة <span>منتج</span>
+            </h1>
+            <p style="color: #b8860b; font-size: 1.1rem; margin-top: 0.3rem;">أدخل بيانات المنتج الجديد</p>
+        </div>
+
+        <div class="form-container">
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label for="productName" class="form-label">
+                            <i class="fas fa-tag" style="color: #d4a373;"></i> اسم المنتج
+                        </label>
+                        <input type="text" class="form-control" id="productName" placeholder="أدخل اسم المنتج" required />
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="productPrice" class="form-label">
+                            <i class="fas fa-dollar-sign" style="color: #d4a373;"></i> السعر
+                        </label>
+                        <input type="number" class="form-control" id="productPrice" placeholder="مثال: 99.99" step="0.01" required />
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="productImage" class="form-label">
+                            <i class="fas fa-image" style="color: #d4a373;"></i> صورة المنتج
+                        </label>
+                        <input type="file" class="form-control" id="productImage" accept="image/*" required />
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <a href="new-fashion.html" class="btn-outline-gold">
+                        <i class="fas fa-arrow-right"></i> رجوع إلى نيو فاشون
+                    </a>
+                    <button type="submit" class="btn-gold">
+                        <i class="fas fa-save"></i> تأكيد الإضافة
+                    </button>
+                    <a href="#bottom" class="btn-scroll-bottom">
+                        <i class="fas fa-arrow-down"></i> إلى نهاية الموقع
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="bottom" style="margin-top: 3rem;"></div>
+
+    <div class="mt-4 text-center footer-note">
+        <i class="fas fa-heart"></i> بوتيك أبو مجتبى .. الأناقة في كل تفصيل &copy; 2026
+    </div>
+
+    <script>
+        document.querySelector('.btn-scroll-bottom')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('bottom').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.querySelector('form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تم إضافة المنتج بنجاح!');
+        });
+    </script>
+</body>
+</html>
